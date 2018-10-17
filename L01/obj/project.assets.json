@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Markus Schnee\\Documents\\GitHub\\Softwaredesign\\Softwaredesign.csproj",
-      "projectName": "Softwaredesign",
-      "projectPath": "C:\\Users\\Markus Schnee\\Documents\\GitHub\\Softwaredesign\\Softwaredesign.csproj",
+      "projectUniqueName": "C:\\Users\\Markus Schnee\\Documents\\GitHub\\Softwaredesign\\L01\\L01.csproj",
+      "projectName": "L01",
+      "projectPath": "C:\\Users\\Markus Schnee\\Documents\\GitHub\\Softwaredesign\\L01\\L01.csproj",
       "packagesPath": "C:\\Users\\Markus Schnee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Markus Schnee\\Documents\\GitHub\\Softwaredesign\\obj\\",
+      "outputPath": "C:\\Users\\Markus Schnee\\Documents\\GitHub\\Softwaredesign\\L01\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
