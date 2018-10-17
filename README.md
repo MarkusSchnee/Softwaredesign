@@ -1,7 +1,7 @@
 # Softwaredesign
 4. Semester -- Fach Softwaredesign
 
-Hallo
+Hallo zusammen
 
-was machst du? 
+
 
