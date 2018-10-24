@@ -6,7 +6,17 @@ namespace L02
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var i= 42;
+            var pi= 3.145;
+            var salute ="Hello,World";
+            var shortValue= 1034;
+
+            System.Type type = shortValue.GetType();
+
+            Console.WriteLine(i);
+            Console.WriteLine(pi);
+            Console.WriteLine(salute);
+            Console.WriteLine(type);
         }
     }
 }
