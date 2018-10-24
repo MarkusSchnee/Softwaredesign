@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Markus Schnee\\Documents\\GitHub\\Softwaredesign\\Testcode\\Testcode.csproj",
-      "projectName": "Testcode",
-      "projectPath": "C:\\Users\\Markus Schnee\\Documents\\GitHub\\Softwaredesign\\Testcode\\Testcode.csproj",
+      "projectUniqueName": "C:\\Users\\Markus Schnee\\Documents\\GitHub\\Softwaredesign\\L02\\L02.csproj",
+      "projectName": "L02",
+      "projectPath": "C:\\Users\\Markus Schnee\\Documents\\GitHub\\Softwaredesign\\L02\\L02.csproj",
       "packagesPath": "C:\\Users\\Markus Schnee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Markus Schnee\\Documents\\GitHub\\Softwaredesign\\Testcode\\obj\\",
+      "outputPath": "C:\\Users\\Markus Schnee\\Documents\\GitHub\\Softwaredesign\\L02\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
