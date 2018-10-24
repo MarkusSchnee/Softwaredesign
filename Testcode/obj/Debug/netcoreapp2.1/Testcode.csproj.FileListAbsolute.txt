@@ -1,0 +1,11 @@
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\Testcode\bin\Debug\netcoreapp2.1\Testcode.deps.json
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\Testcode\bin\Debug\netcoreapp2.1\Testcode.runtimeconfig.json
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\Testcode\bin\Debug\netcoreapp2.1\Testcode.runtimeconfig.dev.json
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\Testcode\bin\Debug\netcoreapp2.1\Testcode.dll
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\Testcode\bin\Debug\netcoreapp2.1\Testcode.pdb
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\Testcode\obj\Debug\netcoreapp2.1\Testcode.csprojAssemblyReference.cache
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\Testcode\obj\Debug\netcoreapp2.1\Testcode.csproj.CoreCompileInputs.cache
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\Testcode\obj\Debug\netcoreapp2.1\Testcode.AssemblyInfoInputs.cache
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\Testcode\obj\Debug\netcoreapp2.1\Testcode.AssemblyInfo.cs
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\Testcode\obj\Debug\netcoreapp2.1\Testcode.dll
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\Testcode\obj\Debug\netcoreapp2.1\Testcode.pdb
