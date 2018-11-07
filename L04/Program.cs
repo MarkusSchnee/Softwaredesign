@@ -3,9 +3,9 @@ using static System.Console;
 
 public class SimplePerson
 {
-   public string FirstName;
-   public string LastName;
-   public DateTime DateOfBirth;
+    public string FirstName;
+    public string LastName;
+    public DateTime DateOfBirth;
 }
 
 namespace Debugging
@@ -19,6 +19,7 @@ namespace Debugging
             Person found = Familytree.Find(root);
 
             WriteLine(found);
+
         }
     }
 }
