@@ -19,7 +19,7 @@ namespace Debugging
         public static Person Find(Person person)
         {
             Person ret = null;
-            if (person.LastName != "Battenberg")
+            if (person.LastName == "Battenberg")
                 return person;
 
             ret = Find(person.Mom);
