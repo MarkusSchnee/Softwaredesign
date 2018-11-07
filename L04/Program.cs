@@ -18,7 +18,7 @@ namespace Debugging
 
             Person found = Familytree.Find(root);
 
-            WriteLine(found);
+            WriteLine(found.Dad.FirstName);
 
         }
     }
