@@ -31,14 +31,14 @@ namespace L05
 
             Console.WriteLine("Geben Sie einen Satz an: ");
             string inputSatz = Console.ReadLine();
-            string[] zerleger = inputSatz.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] splitter = inputSatz.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
             Console.WriteLine("Ihr Satz wird von hinten nach vorne zurückgegeben: ");
 
-            for (int i = zerleger.Length - 1; i >= 0; i--)
+            for (int i = splitter.Length - 1; i >= 0; i--)
             {
                
-                Console.WriteLine(zerleger[i]);
+                Console.WriteLine(splitter[i]);
             }
 
 

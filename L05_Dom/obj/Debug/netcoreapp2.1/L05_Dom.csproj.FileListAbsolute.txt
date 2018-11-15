@@ -1,0 +1,11 @@
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L05_Dom\obj\Debug\netcoreapp2.1\L05_Dom.csprojAssemblyReference.cache
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L05_Dom\obj\Debug\netcoreapp2.1\L05_Dom.csproj.CoreCompileInputs.cache
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L05_Dom\obj\Debug\netcoreapp2.1\L05_Dom.AssemblyInfoInputs.cache
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L05_Dom\obj\Debug\netcoreapp2.1\L05_Dom.AssemblyInfo.cs
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L05_Dom\bin\Debug\netcoreapp2.1\L05_Dom.deps.json
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L05_Dom\bin\Debug\netcoreapp2.1\L05_Dom.runtimeconfig.json
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L05_Dom\bin\Debug\netcoreapp2.1\L05_Dom.runtimeconfig.dev.json
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L05_Dom\bin\Debug\netcoreapp2.1\L05_Dom.dll
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L05_Dom\bin\Debug\netcoreapp2.1\L05_Dom.pdb
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L05_Dom\obj\Debug\netcoreapp2.1\L05_Dom.dll
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L05_Dom\obj\Debug\netcoreapp2.1\L05_Dom.pdb
