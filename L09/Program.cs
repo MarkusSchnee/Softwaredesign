@@ -101,21 +101,21 @@ namespace L09
             string choice = Console.ReadLine();
             if (currentQuiz.IsAnswerChoiceCorrect(choice))
             {
-                Console.WriteLine("Correct Answer! \n");
+                Console.WriteLine("Richtige Antwort! \n");
                 score++;
                 answeredQuestions++;
             }
             else
             {
-                Console.WriteLine("Wrong Answer! \n");
+                Console.WriteLine("Falsche Antwort! \n");
                 score--;
             }
         }
         public static JObject AddNewQuizElement()
         {
-            Console.WriteLine("What type of question do you want to add ? \n 1. QuizSingle \n 2. QuizMultiple \n 3. QuizBinary \n 4. QuizGuess \n 5. QuizFree");
+            Console.WriteLine("Was für einen Fragentyp willst du hinzufügen? \n 1. QuizSingle \n 2. QuizMultiple \n 3. QuizBinary \n 4. QuizGuess \n 5. QuizFree");
             string questionType = Console.ReadLine();
-            Console.WriteLine("Whats the question ?");
+            Console.WriteLine("Was ist die Frage ?");
             string question = Console.ReadLine();
             switch (questionType)
             {
@@ -140,21 +140,21 @@ namespace L09
                     JObject jFree = JObject.FromObject(free);
                     return jFree;
             }
-            Console.WriteLine("Something went wrong");
+            Console.WriteLine("Etwas ist schief gelaufen.");
             return null;
         }
 
         public static QuizElement NewQuizSingle(string question)
         {
 
-            Console.WriteLine("How many possible answers should the question have?");
+            Console.WriteLine("Wieviele Antworten hat die Frage?");
             int numberOfAnswers = Int32.Parse(Console.ReadLine());
             Answer[] arrayOfAnswers = new Answer[numberOfAnswers];
-            Console.WriteLine("Type in the correct answer:");
+            Console.WriteLine("Tippe die richtige Anwort ein:");
             arrayOfAnswers[0] = new Answer(Console.ReadLine(), true);
             for (int i = 1; i < numberOfAnswers; i++)
             {
-                Console.WriteLine("Type in a wrong answer:");
+                Console.WriteLine("Tippe die falsche Antwort ein:");
                 arrayOfAnswers[i] = new Answer(Console.ReadLine(), false);
             }
             return new QuizSingle(question, arrayOfAnswers);
@@ -162,14 +162,14 @@ namespace L09
 
         public static QuizElement NewQuizMultiple(string question)
         {
-            Console.WriteLine("How many possible answers should the question have?");
+            Console.WriteLine("Wieviele Antworten hat die Frage?");
             int numberOfAnswers = Int32.Parse(Console.ReadLine());
             Answer[] arrayOfAnswers = new Answer[numberOfAnswers];
             for (int i = 0; i < numberOfAnswers; i++)
             {
-                Console.WriteLine("Type in an answer:");
+                Console.WriteLine("Tippe die richtige Antwort ein:");
                 string answer = Console.ReadLine();
-                Console.WriteLine("Is the answer correct ? (y/n)");
+                Console.WriteLine("Ist die Antwort richtig ? (y/n)");
                 bool isTrue = Console.ReadLine() == "y";
                 arrayOfAnswers[i] = new Answer(answer, isTrue);
             }
@@ -178,7 +178,7 @@ namespace L09
 
         public static QuizElement NewQuizBinary(string question)
         {
-            Console.WriteLine("Is the answer correct? (y/n)");
+            Console.WriteLine("Ist die Antwort richtig? (y/n)");
             bool theAnswer = false;
             if (Console.ReadLine() == "y")
             {
@@ -189,14 +189,14 @@ namespace L09
 
         public static QuizElement NewQuizGuess(string question)
         {
-            Console.WriteLine("What is the correct number?");
+            Console.WriteLine("Was ist die richtige Nummer?");
             return new QuizGuess(question, Int32.Parse(Console.ReadLine()));
         }
 
         public static QuizElement NewQuizFree(string newQuestion)
         {
-            Console.WriteLine("What is the correct answer?");
-            // return new QuizFree(question, Console.ReadLine());
+            Console.WriteLine("Was ist die richtige Antwort?");
+            
             string correctAnswer = Console.ReadLine();
             return new QuizFree(newQuestion, correctAnswer);
         }
