@@ -1,0 +1,71 @@
+[
+    {
+        "type": "Single",
+        "question": "Wie heißt der Architekt Mosby in der Fernsehserie 'How I met your mother' ?",
+        "answers": [
+            {
+                "text": "Klaus",
+                "isTrue": false
+            },
+            {
+                "text": "Jack",
+                "isTrue": false
+            },
+            {
+                "text": "Barney",
+                "isTrue": false
+            },
+            {
+                "text": "Ted",
+                "isTrue": true
+            },
+            {
+                "text": "Michael",
+                "isTrue": false
+            }
+        ]
+    },
+    {
+        "type":"Multiple",
+        "question": "Was sind beliebte Haustiere für Menschen?",
+        "answers": [
+            {
+                "text": "Katze",
+                "isTrue": true
+            },
+            {
+                "text": "Nashorn",
+                "isTrue": false
+            },
+            {
+                "text": "Hund",
+                "isTrue": true
+            },
+            {
+                "text": "Krokodil",
+                "isTrue": false
+            },
+            {
+                "text": "Hamster",
+                "isTrue": true
+            }
+            
+        ]
+    },
+    {
+        "type": "Binary",
+        "question": "Schneit es in Deutschland manchmal im Winter?",
+        "correct": true 
+        
+    },
+    {
+        "type": "Guess",
+        "question": "Wieviele Stunden hat ein Jahr?",
+        "correct": 8760
+    },
+    {
+        "type": "Free",
+        "question": "Wie heißt der Ersteller dieses Quiz?",
+        "correct": "Markus"
+    }
+]
