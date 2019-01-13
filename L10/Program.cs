@@ -26,7 +26,15 @@ namespace L10
             child1.RemoveChild(grand12);
             var grandgrand1 = tree.CreateNode("grandgrand1");
             grand11.AppendChild(grandgrand1);
+            // neu
             root.PrintTree();
+            root.SetFirstTime();
+            root.ForEachNode(AppendFunction);
+        }
+
+        public static void AppendFunction (string node) // Funktion anhängen
+        {
+            Console.WriteLine(node + " | ");
         }
     }
 }

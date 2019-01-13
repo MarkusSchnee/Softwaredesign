@@ -9,6 +9,8 @@ namespace L10
     {
         public T Data;
         public List<Tree<T>> children = new List<Tree<T>>();
+
+        public static bool calledFirstTime = true;
         public Tree<T> CreateNode(T data)
         {
             Tree<T> newNode = new Tree<T>
@@ -33,5 +35,27 @@ namespace L10
                 child.PrintTree(level + "*");
             }
         }
+
+        public void ForEachNode(Action<string> function)
+        {
+            if (calledFirstTime)
+            {
+                Console.Write(this.ToString() + " | ");
+            }
+
+            calledFirstTime = false;
+
+            for (int i = 0; i < children.Count; i++)
+            {
+                function(children[i].ToString());
+                children[i].ForEachNode(Program.AppendFunction);
+            }
+        }
+
+            public void SetFirstTime()
+            {
+                calledFirstTime = true;
+            }
+
     }
 }
