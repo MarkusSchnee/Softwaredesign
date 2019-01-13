@@ -1,0 +1,4 @@
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L11\obj\Debug\netcoreapp2.1\L11.csprojAssemblyReference.cache
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L11\obj\Debug\netcoreapp2.1\L11.csproj.CoreCompileInputs.cache
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L11\obj\Debug\netcoreapp2.1\L11.AssemblyInfoInputs.cache
+C:\Users\Markus Schnee\Documents\GitHub\Softwaredesign\L11\obj\Debug\netcoreapp2.1\L11.AssemblyInfo.cs

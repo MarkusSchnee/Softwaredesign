@@ -6,7 +6,8 @@ namespace L11
     {
         static void Main(string[] args)
         {
-            
+            Calculator c = new Calculator();
+            c.CalculateSomething();
         }
     }
 }
