@@ -28,7 +28,7 @@ namespace L10
             grand11.AppendChild(grandgrand1);
             // neu
             root.PrintTree();
-            root.SetFirstTime();
+            
             root.ForEachNode(AppendFunction);
         }
 

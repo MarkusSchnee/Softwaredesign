@@ -10,7 +10,7 @@ namespace L10
         public T Data;
         public List<Tree<T>> children = new List<Tree<T>>();
 
-        public static bool calledFirstTime = true;
+        public static bool notCalled = true;
         public Tree<T> CreateNode(T data)
         {
             Tree<T> newNode = new Tree<T>
@@ -38,24 +38,21 @@ namespace L10
 
         public void ForEachNode(Action<string> function)
         {
-            if (calledFirstTime)
+            if (notCalled)
             {
                 Console.Write(this.ToString() + " | ");
             }
 
-            calledFirstTime = false;
+            notCalled = false;
 
-            for (int i = 0; i < children.Count; i++)
-            {
-                function(children[i].ToString());
-                children[i].ForEachNode(Program.AppendFunction);
-            }
+           foreach (Tree<T> child in children)
+           {
+               function(child.Data.ToString());
+               child.ForEachNode(Program.AppendFunction);
+           }
         }
 
-            public void SetFirstTime()
-            {
-                calledFirstTime = true;
-            }
+           
 
     }
 }
