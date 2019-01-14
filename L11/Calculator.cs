@@ -3,9 +3,10 @@ using System;
 namespace L11
 {
     delegate void ReportProgressMethod(int progress);
-    public class Calculator
+     class Calculator
     {
         public event ReportProgressMethod ProgressMethod;
+        
         public void Calculatorr()
         {
             ProgressMethod += ProgressInPercent;
@@ -19,10 +20,11 @@ namespace L11
                 {
                     ProgressMethod(i);
                 }
+
             }
         }
 
-        
+       
 
         public void ProgressInPercent(int progress)
         {
