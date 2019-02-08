@@ -1,0 +1,11 @@
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Abschlussabgabe/bin/Debug/netcoreapp2.2/Abschlussabgabe.deps.json
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Abschlussabgabe/bin/Debug/netcoreapp2.2/Abschlussabgabe.runtimeconfig.json
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Abschlussabgabe/bin/Debug/netcoreapp2.2/Abschlussabgabe.runtimeconfig.dev.json
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Abschlussabgabe/bin/Debug/netcoreapp2.2/Abschlussabgabe.dll
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Abschlussabgabe/bin/Debug/netcoreapp2.2/Abschlussabgabe.pdb
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Abschlussabgabe/obj/Debug/netcoreapp2.2/Abschlussabgabe.csprojAssemblyReference.cache
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Abschlussabgabe/obj/Debug/netcoreapp2.2/Abschlussabgabe.csproj.CoreCompileInputs.cache
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Abschlussabgabe/obj/Debug/netcoreapp2.2/Abschlussabgabe.AssemblyInfoInputs.cache
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Abschlussabgabe/obj/Debug/netcoreapp2.2/Abschlussabgabe.AssemblyInfo.cs
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Abschlussabgabe/obj/Debug/netcoreapp2.2/Abschlussabgabe.dll
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Abschlussabgabe/obj/Debug/netcoreapp2.2/Abschlussabgabe.pdb
