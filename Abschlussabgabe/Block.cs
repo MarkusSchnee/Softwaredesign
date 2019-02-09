@@ -7,10 +7,7 @@ namespace Abschlussabgabe
     {
         public Block()
         {
-            public Block()
-            {
-            }
+        }
         public Course course;
     }
-
 }
