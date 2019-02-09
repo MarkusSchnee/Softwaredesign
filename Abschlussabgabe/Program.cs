@@ -7,13 +7,17 @@ namespace Abschlussabgabe
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("Hello World!");
             Course kurs = new Course
             {
-                name= "GDV",
+                name = "GDV",
                 description = "Mega Schnurbi",
-                conditions = new List<Condition>(Tonstudio),
-            }
+                //conditions = new List<Condition>(Tonstudio),
+            };
+
+
+
         }
     }
 }

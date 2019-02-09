@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace Abschlussabgabe
 {
+    enum Conditions {Normal, Computer, Tonstudio, Fernsehstudio, Vorlesungssaal}
 
     class Condition
     {
-       enum Conditions {Computer, Tonstudio, Fernsehstudio, Vorlesungssaal};
         
         
     }

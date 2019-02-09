@@ -5,14 +5,52 @@ namespace Abschlussabgabe
 {
     class Room
     {
-        public Room(string name, int seats, List<Condition> roomConditions, Timetable roomTimetable)
+        public Room(string name, int seats, List<Conditions> roomConditions)
         {
-
+            this.name = name;
+            this.seats = seats;
+            this.roomConditions = roomConditions;
+            this.roomTimetable = new Timetable();
         }
         public string name;
         public int seats;
-        public List<Condition> roomConditions;
+        public List<Conditions> roomConditions;
         public Timetable roomTimetable;
+
+        public bool compareWithCourse(Course course)
+        {
+
+            foreach(Conditions condition in roomConditions)
+            {
+                if(course.conditions.Contains(condition))
+                    continue;
+                else return false;
+            }
+
+            foreach(Conditions condition in course.conditions)
+            {
+                if(roomConditions.Contains(condition))
+                    continue;
+                else return false;
+            }
+
+
+            if(this.isRoomBigEnough(course) == false)
+                return false;
+
+            return true;
+        }
+
+        public bool isRoomBigEnough(Course course){
+            int allParticipants = 0;
+            foreach(Studium studium in course.participants)
+            {
+                allParticipants += studium.students;
+            }
+            if(seats >= allParticipants)
+                return true;
+            else return false;
+        }
 
     }
 }
