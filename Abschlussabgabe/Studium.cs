@@ -18,5 +18,11 @@ namespace Abschlussabgabe
 
         public Timetable timetable; 
         
+        public bool hasTime(int numberOfDay, int block)
+        {
+            if(timetable.week[numberOfDay].blocksOnDay[block].course == null)
+                return true;
+            else return false;
+        }
     }
 }
