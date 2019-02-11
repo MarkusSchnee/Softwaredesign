@@ -41,8 +41,12 @@ namespace Abschlussabgabe
             generator.allDozenten.Add(Anders);
             Dozent Unbekannt = new Dozent("Un", "Bekannt", new int[2] { 1, 5 });
             generator.allDozenten.Add(Unbekannt);
-
-            //neue Profs
+            Dozent Frieß = new Dozent("Regina", "Frieß", new int[2] { 2, 5 });
+            generator.allDozenten.Add(Frieß);
+            Dozent Timmalog = new Dozent("Philipp", "Timmalog", new int[2] { 4, 5 });
+            generator.allDozenten.Add(Frieß);
+            Dozent Ruf = new Dozent("Oliver", "Ruf", new int[2] { 1, 2 });
+            generator.allDozenten.Add(Frieß);
             Dozent Taube = new Dozent("Wolfgang", "Taube", new int[2] { 3, 5 });
             generator.allDozenten.Add(Taube);
             Dozent Pietsch = new Dozent("Gotthard", "Pietsch", new int[2] { 1, 2 });
@@ -51,6 +55,8 @@ namespace Abschlussabgabe
             generator.allDozenten.Add(Engenhart);
 
 
+
+            //************************************************************************************* */
             //MIB
             //************************************************************************************* */
 
@@ -70,7 +76,7 @@ namespace Abschlussabgabe
             generator.allCourses.Add(new Course("AT", "Audiotechnik", Reusch, MIB1, new List<Conditions>() { Conditions.Normal }));
             generator.allCourses.Add(new Course("BWL", "Grundlagen der Betriebswirtschaftslehre", Herbstreit, MIB1, new List<Conditions>() { Conditions.Normal }));
             generator.allCourses.Add(new Course("PGR PR", "Programmieren Praktikum", Eisenbigler, MIB1, new List<Conditions>() { Conditions.Normal }));
-            generator.allCourses.Add(new Course("BWL PR", "Grundlagen der Betriebswirtschaftslehre Praktikum", Herbstreit, generator.allStudys[0], new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("BWL PR", "Grundlagen der Betriebswirtschaftslehre Praktikum", Herbstreit, MIB1, new List<Conditions>() { Conditions.Normal }));
             generator.allCourses.Add(new Course("MatMedInf1", "Mathematik in Medien und Informatik 1", Schneider, MIB1, new List<Conditions>() { Conditions.Vorlesungssaal }));
             generator.allCourses.Add(new Course("VideoTech", "Videotechnik", Hottong, MIB1, new List<Conditions>() { Conditions.Normal }));
             generator.allCourses.Add(new Course("MedTechPra", "Medientechnik Praktikum", Hottong, MIB1, new List<Conditions>() { Conditions.Fernsehstudio }));
@@ -116,9 +122,10 @@ namespace Abschlussabgabe
             generator.allCourses.Add(new Course("FreSpr", "Fremdsprachenmodul", Unbekannt, MIB6, new List<Conditions> { Conditions.Vorlesungssaal }));
 
 
+
+            //************************************************************************************* */
             //OMB
             //************************************************************************************* */
-
             Studium OMB1 = new Studium("OMB1", 40);
             generator.allStudys.Add(OMB1);
             Studium OMB2 = new Studium("OMB2", 30);
@@ -173,20 +180,78 @@ namespace Abschlussabgabe
             generator.allCourses.Add(new Course("IntDesPra", "Interface Design Praktikum", Engenhart, OMB5, new List<Conditions> { Conditions.Computer }));
             generator.allCourses.Add(new Course("SteAnwPra", "Streaming Anwendungen Praktikum", Hottong, OMB5, new List<Conditions> { Conditions.Computer }));
             generator.allCourses.Add(new Course("StrAnw", "Streaming Anwendungen", Hottong, OMB5, new List<Conditions> { Conditions.Normal }));
-            generator.allCourses.Add(new Course("PrStud", "Projektstudium", Krach, MIB5, new List<Conditions> { Conditions.Normal })); //Dozent? Variabel
+            generator.allCourses.Add(new Course("PrStud", "Projektstudium", Krach, OMB5, new List<Conditions> { Conditions.Normal })); //Dozent? Variabel
 
             //OMB6
             generator.allCourses.Add(new Course("OnPrOnMark", "Online Produktmanagement und Online Marketing", Pietsch, OMB6, new List<Conditions> { Conditions.Normal }));
             generator.allCourses.Add(new Course("FreSpr", "Fremdsprachenmodul", Unbekannt, MIB6, new List<Conditions> { Conditions.Vorlesungssaal }));
 
+
+
+
+            //************************************************************************************* */
             //MKB
             //************************************************************************************* */
+            Studium MKB1 = new Studium("MKB1", 35);
+            generator.allStudys.Add(MKB1);
+            Studium MKB2 = new Studium("MKB2", 33);
+            generator.allStudys.Add(MKB2);
+            Studium MKB4 = new Studium("MKB4", 32);
+            generator.allStudys.Add(MKB4);
+            Studium MKB5 = new Studium("MKB5", 32);
+            generator.allStudys.Add(MKB5);
+            Studium MKB6 = new Studium("MKB6", 20);
+            generator.allStudys.Add(MKB6);
+            Studium MKB7 = new Studium("MKB7", 18);
+            generator.allStudys.Add(MKB7);
 
+            //MKB1
+            generator.allCourses.Add(new Course("AT", "Audiotechnik", Reusch, MKB1, new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("BWL", "Grundlagen der Betriebswirtschaftslehre", Herbstreit, MKB1, new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("PGR PR", "Programmieren Praktikum", Eisenbigler, MKB1, new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("MedAn", "Medienanlayse Vorlesung", Frieß, MKB1, new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("GrdMedKonS", "Grundlagen der Medienkonzeption Seminar", Frieß, MKB1, new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("VideoTech", "Videotechnik", Schneider, MKB1, new List<Conditions>() { Conditions.Vorlesungssaal }));
+            generator.allCourses.Add(new Course("MedPsych", "Medienpsychologie", Dittler, MKB1, new List<Conditions>() { Conditions.Vorlesungssaal }));
+            generator.allCourses.Add(new Course("EnInAn1VL", "Entwicklung Interaktiver Anwendungen 1 Vorlesung", Timmalog, MKB1, new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("EnInAn1PR", "Entwicklung Interaktiver Anwendungen 1 Praktikum", Timmalog, MKB1, new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("GrMedGest", "Grundlagen Mediengestaltung", Fries, MKB1, new List<Conditions>() { Conditions.Vorlesungssaal }));
+            generator.allCourses.Add(new Course("GrMedGestPra", "Grundlagen Mediengestaltung Praktikum", Fries, MKB1, new List<Conditions>() { Conditions.Vorlesungssaal }));
+            generator.allCourses.Add(new Course("MedTechPra", "Medientechnik Praktikum", Waldowski, MKB1, new List<Conditions>() { Conditions.Fernsehstudio }));
 
+            //MKB2
+            generator.allCourses.Add(new Course("MaGrCGGe", "Mathematische Grundlangen von Computergrafik und Gestaltung", Schneider, MKB2, new List<Conditions>() { Conditions.Vorlesungssaal }));
+            generator.allCourses.Add(new Course("AVProdPra", "AV-Produktion Praktikum", Reusch, MKB2, new List<Conditions>() { Conditions.Fernsehstudio }));
+            generator.allCourses.Add(new Course("AVProdukt", "AV-Produktion Vorlesung", Reusch, MKB2, new List<Conditions>() { Conditions.Vorlesungssaal }));
+            generator.allCourses.Add(new Course("EnInAn2", "Entwicklung Interaktiver Anwendungen 2", DellOro, MKB2, new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("EnInAn2Pra", "Entwicklung Interaktiver Anwendungen 2 Praktikum", DellOro, MKB2, new List<Conditions>() { Conditions.Computer }));
+            generator.allCourses.Add(new Course("CoGr3DMPR", "Computergrafik und 3D Modellierung Praktikum", Müller, MKB2, new List<Conditions>() { Conditions.Computer }));
+            generator.allCourses.Add(new Course("UsExDe", "User Experience Design Vorlesung", Krach, MKB2, new List<Conditions>() { Conditions.Vorlesungssaal }));
+            generator.allCourses.Add(new Course("MedÖko", "Medienökonomie", Zydorek, MKB2, new List<Conditions>() { Conditions.Vorlesungssaal }));
+            generator.allCourses.Add(new Course("Mark", "Marketing", Zydorek, MKB2, new List<Conditions>() { Conditions.Vorlesungssaal }));
+            generator.allCourses.Add(new Course("UsExDeSe", "User Experience Design Seminar", Krach, MKB2, new List<Conditions>() { Conditions.Normal }));
 
+            //MKB4
+            generator.allCourses.Add(new Course("ELeOnLe", "E-Learning und Online-Learning Vorlesung", Dittler, MKB4, new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("ELeOnLeÜb", "E-Learning und Online-Learning Übung", Dittler, MKB4, new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("Konz", "Konzeption", Frieß, MKB4, new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("Identw", "Ideenentwicklung", Fries, MKB4, new List<Conditions>() { Conditions.Normal }));
+            generator.allCourses.Add(new Course("PrStu", "Projektstudium", Krach, MKB4, new List<Conditions> { Conditions.Normal }));
+            generator.allCourses.Add(new Course("PrStud Vor", "Projektstudium Vorlesung", Zydorek, MIB4, new List<Conditions> { Conditions.Vorlesungssaal }));
+            generator.allCourses.Add(new Course("CreaWr", "Creativ Writing", Ruf, MKB4, new List<Conditions> { Conditions.Normal }));
+            generator.allCourses.Add(new Course("Stortell", "Storytelling", Ruf, MKB4, new List<Conditions> { Conditions.Normal }));
 
+            //MKB5
+            generator.allCourses.Add(new Course("OpMark", "Operatives Marketing", Pietsch, MKB5, new List<Conditions> { Conditions.Normal }));
+            generator.allCourses.Add(new Course("IntDesVor", "Interface Disign Vorlesung", Krach, MKB5, new List<Conditions> { Conditions.Normal }));
+            generator.allCourses.Add(new Course("IntDesPra", "Interface Disign Praktikum", Krach, MKB5, new List<Conditions> { Conditions.Normal }));
+            generator.allCourses.Add(new Course("PrStu", "Projektstudium", Krach, MKB5, new List<Conditions> { Conditions.Normal }));
 
+            //MKB6
+            generator.allCourses.Add(new Course("MedTheo", "Medientheorie", Frieß, MIB6, new List<Conditions> { Conditions.Vorlesungssaal }));
+            generator.allCourses.Add(new Course("FreSpr", "Fremdsprachenmodul", Unbekannt, MIB6, new List<Conditions> { Conditions.Vorlesungssaal }));
 
+ 
 
             //ROOMS
             generator.allRooms.Add(new Room("I0.01", 30, new List<Conditions> { Conditions.Normal }));
@@ -205,6 +270,10 @@ namespace Abschlussabgabe
             generator.allRooms.Add(new Room("C0.02", 50, new List<Conditions> { Conditions.Vorlesungssaal }));
             generator.allRooms.Add(new Room("L2.08", 40, new List<Conditions> { Conditions.Computer }));
             generator.allRooms.Add(new Room("A3.11", 40, new List<Conditions> { Conditions.Normal }));
+            generator.allRooms.Add(new Room("N1.01", 45, new List<Conditions> { Conditions.Fernsehstudio }));
+
+            generator.allRooms.Add(new Room("N1.06", 50, new List<Conditions> { Conditions.Fernsehstudio }));
+            generator.allRooms.Add(new Room("A2.05", 50, new List<Conditions> { Conditions.Normal }));
 
 
         }
