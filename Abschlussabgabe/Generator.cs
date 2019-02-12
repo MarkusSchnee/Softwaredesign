@@ -66,31 +66,31 @@ namespace Abschlussabgabe
 
         public void FillBlock(int block)
         {
-            foreach (Room room in allRooms) //nehmen ersten Raum in allRooms
+            foreach (Room room in allRooms) //takes first room in allRooms
             {
-                foreach (Day day in room.timetable.week) //setzen Tag fest
+                foreach (Day day in room.timetable.week) //set day
                 {
 
-                    if (allCourses.Count == 0) //schauen uns Länge von Liste an, wenn leer gehen wir direkt raus
+                    if (allCourses.Count == 0) //control if list is filled
                         return;
 
-                    Course course = GetPossibleCourse(room, day.numberOfDay - 1, block); //haben jetzt durch Methode unten course, der passt
+                    Course course = GetPossibleCourse(room, day.numberOfDay - 1, block); //course that fits 
 
-                    if (course == null)
-                        continue; //geht wieder hoch zur foreach schleife
+                    if (course == null) //course does not focus any object
+                        continue; 
 
-                    course.studium.timetable.week[day.numberOfDay - 1].blocksPerDay[block].course = course; //alle drei sprechen gleichen Zeitpunkt an
+                    course.studium.timetable.week[day.numberOfDay - 1].blocksPerDay[block].course = course; 
                     room.timetable.week[day.numberOfDay - 1].blocksPerDay[block].course = course;
                     course.dozent.timetable.week[day.numberOfDay - 1].blocksPerDay[block].course = course;
 
-                    allCourses.Remove(course); //dass course nicht zweimal verwendet wird, course wird aus liste course entfernt
+                    allCourses.Remove(course);
                 }
             }
         }
 
         private Course GetPossibleCourse(Room room, int numberOfDay, int block)
         {
-            List<Course> tempAllCourses = new List<Course>(); //neue Liste aus allCourses erstellen, temporäre Liste
+            List<Course> tempAllCourses = new List<Course>(); //temporary list
             foreach (Course copyCourse in allCourses)
                 tempAllCourses.Add(copyCourse);
 
@@ -101,19 +101,19 @@ namespace Abschlussabgabe
                 if ((tempAllCourses == null) || (tempAllCourses.Count == 0)) 
                     return null;
 
-                course = tempAllCourses[0];                                                                                                                  //richtige Anforderungen, richtige Größe              
+                course = tempAllCourses[0];                                                                                                                                
 
-                if (!course.dozent.IsBlocked(numberOfDay) && course.dozent.HasTime(numberOfDay, block) && course.studium.HasTime(numberOfDay, block) && room.CompareWithCourse(course)) //wenn jeder dieser Bedingung true ist wird i = 1 gesetzt, While schleife brcht dann ab
+                if (!course.dozent.IsBlocked(numberOfDay) && course.dozent.HasTime(numberOfDay, block) && course.studium.HasTime(numberOfDay, block) && room.CompareWithCourse(course))
                 {
                     i = 1;
                 }
                 else
                 {
-                    tempAllCourses.Remove(course); //wenn wir hier landen, wird aktueller course aus Liste gelöscht, weil iwas nicht passt
-                    course = null; //nicht unbedingt nötig
+                    tempAllCourses.Remove(course); //course ist deleted because something does not fit
+                    course = null; 
                 }
             }
-            return course; //wenn wir aus while schleife raus kommen, passt alles und course wird returned
+            return course; //while loop ok, course fits and will be returned
         }
 
     }

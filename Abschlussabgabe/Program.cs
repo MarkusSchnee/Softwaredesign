@@ -19,7 +19,7 @@ namespace Abschlussabgabe
                 Console.WriteLine(studium.name);  //Testzwecke
             }*/
 
-            Datas.CreateDatas(generator); //statische Methode, leere generator Listen werden befüllt, fill empty list out of generator
+            Datas.CreateDatas(generator); //fill empty lists out of generator
 
             //JsonWrite(generator);
 
@@ -33,7 +33,7 @@ namespace Abschlussabgabe
             generator.GetByNameDozent("Krach").timetable.Show();
 
             Console.WriteLine();
-            generator.allStudys[5].PossibleWPMs(generator);
+            generator.allStudys[3].PossibleWPMs(generator);
         }
 
         private static void CreateTimetables(Generator generator, Settings settings)
