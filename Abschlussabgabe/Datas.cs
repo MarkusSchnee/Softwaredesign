@@ -5,7 +5,7 @@ namespace Abschlussabgabe
 {
     class Datas
     {
-        public static void createDatas(Generator generator)
+        public static void CreateDatas(Generator generator)
         {
             Dozent Waldowski = new Dozent("Michael", "Waldowski", new int[2] { 4, 5 });
             generator.allDozenten.Add(Waldowski); //0
@@ -44,9 +44,9 @@ namespace Abschlussabgabe
             Dozent Frieß = new Dozent("Regina", "Frieß", new int[2] { 2, 5 });
             generator.allDozenten.Add(Frieß);
             Dozent Timmalog = new Dozent("Philipp", "Timmalog", new int[2] { 4, 5 });
-            generator.allDozenten.Add(Frieß);
+            generator.allDozenten.Add(Timmalog);
             Dozent Ruf = new Dozent("Oliver", "Ruf", new int[2] { 1, 2 });
-            generator.allDozenten.Add(Frieß);
+            generator.allDozenten.Add(Ruf);
             Dozent Taube = new Dozent("Wolfgang", "Taube", new int[2] { 3, 5 });
             generator.allDozenten.Add(Taube);
             Dozent Pietsch = new Dozent("Gotthard", "Pietsch", new int[2] { 1, 2 });
@@ -251,7 +251,7 @@ namespace Abschlussabgabe
             generator.allCourses.Add(new Course("MedTheo", "Medientheorie", Frieß, MIB6, new List<Conditions> { Conditions.Vorlesungssaal }));
             generator.allCourses.Add(new Course("FreSpr", "Fremdsprachenmodul", Unbekannt, MIB6, new List<Conditions> { Conditions.Vorlesungssaal }));
 
- 
+
 
             //ROOMS
             generator.allRooms.Add(new Room("I0.01", 30, new List<Conditions> { Conditions.Normal }));
@@ -275,6 +275,11 @@ namespace Abschlussabgabe
             generator.allRooms.Add(new Room("N1.06", 50, new List<Conditions> { Conditions.Fernsehstudio }));
             generator.allRooms.Add(new Room("A2.05", 50, new List<Conditions> { Conditions.Normal }));
 
+            //WPMs
+
+            generator.allWpms.Add(new WPM("GLFTV", "Gute Laune Furtwangen", 5, 6, generator.allDozenten[1], new List<Conditions>(){Conditions.Fernsehstudio} ));
+            generator.allWpms.Add(new WPM("AudioDes", "Audio Design", 4, 6, generator.allDozenten[2], new List<Conditions>(){Conditions.Tonstudio} ));
+            generator.allWpms.Add(new WPM("DeLe", "Deep Learning", 3, 6, generator.allDozenten[3], new List<Conditions>(){Conditions.Normal} ));
 
         }
     }

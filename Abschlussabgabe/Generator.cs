@@ -26,12 +26,22 @@ namespace Abschlussabgabe
 
         public bool timetablesAreCalculated;
 
-        public Studium getByName(string name)
+        public Studium GetStudiumByName(string name)
+         {
+             foreach (Studium studium in allStudys)
+             {
+                 if (studium.name.Equals(name))
+                     return studium;
+             }
+             return null;
+         }
+
+         public Dozent GetByNameDozent(string prename)
         {
-            foreach (Studium studium in allStudys)
+            foreach (Dozent dozent in allDozenten)
             {
-                if (studium.name.Equals(name))
-                    return studium;
+                if (dozent.prename.Equals(prename))
+                    return dozent;
             }
             return null;
         }
@@ -54,56 +64,56 @@ namespace Abschlussabgabe
         //     }
         // }
 
-        public void fillBlock(int block)
+        public void FillBlock(int block)
         {
-            foreach (Room room in allRooms)
+            foreach (Room room in allRooms) //nehmen ersten Raum in allRooms
             {
-                foreach (Day day in room.timetable.week)
+                foreach (Day day in room.timetable.week) //setzen Tag fest
                 {
 
-                    if (allCourses.Count == 0)
+                    if (allCourses.Count == 0) //schauen uns Länge von Liste an, wenn leer gehen wir direkt raus
                         return;
 
-                    Course course = getPossibleCourse(room, day.numberOfDay-1, block);
+                    Course course = GetPossibleCourse(room, day.numberOfDay - 1, block); //haben jetzt durch Methode unten course, der passt
 
                     if (course == null)
-                        continue;
+                        continue; //geht wieder hoch zur foreach schleife
 
-                    course.studium.timetable.week[day.numberOfDay-1].blocksPerDay[block].course = course;
-                    room.timetable.week[day.numberOfDay-1].blocksPerDay[block].course = course;
-                    course.dozent.timetable.week[day.numberOfDay-1].blocksPerDay[block].course = course;
+                    course.studium.timetable.week[day.numberOfDay - 1].blocksPerDay[block].course = course; //alle drei sprechen gleichen Zeitpunkt an
+                    room.timetable.week[day.numberOfDay - 1].blocksPerDay[block].course = course;
+                    course.dozent.timetable.week[day.numberOfDay - 1].blocksPerDay[block].course = course;
 
-                    allCourses.Remove(course);
+                    allCourses.Remove(course); //dass course nicht zweimal verwendet wird, course wird aus liste course entfernt
                 }
             }
         }
 
-        private Course getPossibleCourse(Room room, int numberOfDay, int block)
+        private Course GetPossibleCourse(Room room, int numberOfDay, int block)
         {
-            List<Course> tempAllCourses = new List<Course>();
+            List<Course> tempAllCourses = new List<Course>(); //neue Liste aus allCourses erstellen, temporäre Liste
             foreach (Course copyCourse in allCourses)
                 tempAllCourses.Add(copyCourse);
 
             int i = 0;
-            Course course = null;
+            Course course = null; 
             while (i != 1)
             {
-                if ((tempAllCourses == null) || (tempAllCourses.Count == 0))
+                if ((tempAllCourses == null) || (tempAllCourses.Count == 0)) 
                     return null;
 
-                course = tempAllCourses[0];
+                course = tempAllCourses[0];                                                                                                                  //richtige Anforderungen, richtige Größe              
 
-                if (!course.dozent.isBlocked(numberOfDay) && course.dozent.hasTime(numberOfDay, block) && course.studium.hasTime(numberOfDay, block) && room.compareWithCourse(course))
+                if (!course.dozent.IsBlocked(numberOfDay) && course.dozent.HasTime(numberOfDay, block) && course.studium.HasTime(numberOfDay, block) && room.CompareWithCourse(course)) //wenn jeder dieser Bedingung true ist wird i = 1 gesetzt, While schleife brcht dann ab
                 {
                     i = 1;
                 }
                 else
                 {
-                    tempAllCourses.Remove(course);
-                    course = null;
+                    tempAllCourses.Remove(course); //wenn wir hier landen, wird aktueller course aus Liste gelöscht, weil iwas nicht passt
+                    course = null; //nicht unbedingt nötig
                 }
             }
-            return course;
+            return course; //wenn wir aus while schleife raus kommen, passt alles und course wird returned
         }
 
     }

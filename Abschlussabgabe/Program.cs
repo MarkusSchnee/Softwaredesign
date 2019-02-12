@@ -11,36 +11,41 @@ namespace Abschlussabgabe
         static void Main(string[] args)
         {
             Generator generator = new Generator();
-            //jsonRead(generator);
+            //JsonRead(generator);
             Settings settings = new Settings(new int[6] { 2, 3, 4, 1, 5, 6 }, 5, 2, 3);
 
             /*foreach(Studium studium in generator.allStudys)
             {
-                Console.WriteLine(studium.name);
+                Console.WriteLine(studium.name);  //Testzwecke
             }*/
-            
-            Datas.createDatas(generator);
 
-            //jsonWrite(generator);
+            Datas.CreateDatas(generator); //statische Methode, leere generator Listen werden befüllt, fill empty list out of generator
 
-            createTimetables(generator, settings);
+            //JsonWrite(generator);
 
-            Console.WriteLine(generator.allStudys[0].name + ":");
-            generator.allStudys[0].timetable.show();
+            CreateTimetables(generator, settings);
 
-            generator.allStudys[5].possibleWpms(generator);
+            Console.WriteLine("MIB2");
+            generator.GetStudiumByName("MIB2").timetable.Show();
+
+            Console.WriteLine();
+            Console.WriteLine("Krach");
+            generator.GetByNameDozent("Krach").timetable.Show();
+
+            Console.WriteLine();
+            generator.allStudys[5].PossibleWPMs(generator);
         }
 
-        private static void createTimetables(Generator generator, Settings settings)
+        private static void CreateTimetables(Generator generator, Settings settings)
         {
-            foreach (int block in settings.orderBlocks)
+            foreach (int block in settings.orderBlocks) //geht durch des array für 6 blöcke durch
             {
-                generator.fillBlock(block - 1);
+                generator.FillBlock(block - 1);
             }
             generator.timetablesAreCalculated = true;
         }
 
-        private static void jsonWrite(Generator generator)
+        private static void JsonWrite(Generator generator)
         {
             JsonSerializerSettings settings = new JsonSerializerSettings
             {
@@ -48,7 +53,7 @@ namespace Abschlussabgabe
                 Formatting = Formatting.Indented,
             };
 
-            string JStudys = JsonConvert.SerializeObject(generator.allStudys, settings);
+            string JStudys = JsonConvert.SerializeObject(generator.allStudys, settings);  //convert object to string
             string JRooms = JsonConvert.SerializeObject(generator.allRooms, settings);
             string JCourses = JsonConvert.SerializeObject(generator.allCourses, settings);
             string JDozenten = JsonConvert.SerializeObject(generator.allDozenten, settings);
@@ -62,7 +67,7 @@ namespace Abschlussabgabe
 
         }
 
-        private static void jsonRead(Generator generator)
+        private static void JsonRead(Generator generator)  //liest aus Json datei raus, bsp Studiengänge.json --> befüllt Liste Studium
         {
             JsonSerializerSettings settings = new JsonSerializerSettings
             {
